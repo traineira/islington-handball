@@ -13,6 +13,7 @@ Player.add({
 	dateOfBirthday: { type: Types.Date},
 	position: { type: String, index: true },
 	image: { type: Types.CloudinaryImage },
+  team: { type: Types.Relationship, ref: 'Team', many: false },
 });
 
 Player.register();
