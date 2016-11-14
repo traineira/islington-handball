@@ -12,6 +12,7 @@ Player.add({
 	name: { type: String, required: true },
 	dateOfBirthday: { type: Types.Date},
 	position: { type: String, index: true },
+  nationality: { type: String },
 	image: { type: Types.CloudinaryImage },
   team: { type: Types.Relationship, ref: 'Team', many: false },
 });
