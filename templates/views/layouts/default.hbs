@@ -50,24 +50,6 @@
 										<a href="{{ href }}">{{ label }}</a>
 									</li>
 								{{/each}}
-                <li class="social-networks">
-                  <ul >
-                    <li>
-                      <a href="https://www.facebook.com/IslingtonHC" target="_blank">
-                        <img src="/images/facebook_logo.png" width="30" class="img-rounded"/>
-                      </a>
-                      <a href="https://twitter.com/IslingtonHC" target="_blank">
-                        <img src="/images/twitter_logo.png" width="30" class="img-rounded"/>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/islingtonhc/" target="_blank">
-                        <img src="/images/instagram_logo.png" width="30" class="img-rounded"/>
-                      </a>
-                      <img src="./img/facebook_logo.png" width="30" style='visibility: hidden' />
-                    </li>
-                  </ul>
-                </li>
               </ul>
 							<ul class="nav navbar-nav navbar-right">
 								<!-- {{#if user}}
@@ -113,23 +95,49 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
+
     <footer>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
-            <!-- <p>&copy; 2015 by Lions Sports Services </p> -->
-            <div class="col-md-3">
+          <div class="col-md-4">
+            <div class="row">
               <p class="associationWith"> In association with:</p>
             </div>
-            <div class="col-md-3">
-              <img src="/images/d0f738_86d51286ab0f408a8bbee935b9a6e82d.jpg" class="img-circle img-responsive">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="/images/Arsenal_club_logo.png" class="footer-image">
+              </div>
+              <div class="col-md-4">
+                <img src="/images/d0f738_2df1550054e44766809012dba95b1bfa.jpg" class="footer-image">
+              </div>
+              <div class="col-md-4">
+                <img src="/images/d0f738_3927cbc151f04ff081fe485c8ff2e964.png" class="footer-image">
+              </div>
             </div>
-            <div class="col-md-3 center">
-              <img src="/images/d0f738_2df1550054e44766809012dba95b1bfa.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="row">
+                <p class="associationWith"> Follow us online:</p>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.facebook.com/IslingtonHC" target="_blank">
+                  <img src="/images/facebook_logo.png" class="footer-image img-rounded"/>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://twitter.com/IslingtonHC" class="social" target="_blank">
+                  <img src="/images/twitter_logo.png" class="footer-image img-rounded"/>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.instagram.com/islingtonhc/" class="social" target="_blank">
+                  <img src="/images/instagram_logo.png" class="footer-image img-rounded"/>
+                </a>
+              </div>
             </div>
-            <div class="col-md-3 center">
-              <img src="/images/d0f738_3927cbc151f04ff081fe485c8ff2e964.png" class="img-circle img-responsive">
-            </div>
+          </div>
+          <div class="col-md-4">
           </div>
         </div>
       </div>
