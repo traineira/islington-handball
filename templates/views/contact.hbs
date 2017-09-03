@@ -1,44 +1,77 @@
 <div class="container">
-	<h1>Contact Us</h1>
+	<h1>Join Us</h1>
 </div>
 <div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+	<div class="box">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<div class="row">
+          <div class="col-sm-6 col-md-12">
+
+                  Islington Handball Club is a new handball club based in Islington, North London. We welcome all ages (girls/boys, Men/Women) to join the club!
+                  <br>
+                  If you are you looking for a handball team in London, Islington Handball Club is offering trainings for new players and players with Advanced level.
+                  So if you want to try or continue playing Handball, contact us !
+                  <br>
+                  Your first session with us will be FREE
+        </div>
 				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
+        <div class="row">
+          <div class="col-sm-6 col-md-12" id="training">
+            <iframe width="500" height="400" frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSyrzrTlfQSBDlL2Uhe5Ezk7_oL9HEeUE &q=London+Metropolitan+University" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+			</div>
+			<div class="col-sm-6 col-md-6">
+				{{#if enquirySubmitted}}
+					<h3>Thanks for getting in touch.</h3>
+				{{else}}
+					<form method="post">
+						<input type="hidden" name="action" value="contact">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Name</label>
+							<input type="text" name="name.full" class="form-control" value="{{formData.[name.full]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Phone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+						<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+							<label>What are you contacting us about?</label>
+							<select name="enquiryType" class="form-control">
 						<option value="">(select one)</option>
 						{{#each enquiryTypes}}
 						<option value="{{value}}">{{label}}</option>
 						{{/each}}
 					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+						</div>
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<label>Message</label>
+							<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			</div>
 		</div>
 	</div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?callback=training"></script>
+<script type="text/javascript">
+$( document ).ready({
+    var mapCanvas = document.getElementById("training");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+})
+</script>

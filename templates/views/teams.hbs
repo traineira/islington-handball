@@ -1,23 +1,28 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2  ">
-				<hr>
+  <div class="container">
+      <div class="col-sm-12 col-md-12">
         {{#each data.teams}}
+        <div class="row">
+          <div class="box">
           <div class="team col-md-12">
-
-			     <h1>{{this.name}}</h1>
+            <h1 style="text-align: center;">{{this.name}}</h1>
+            <hr>
+            <div class="team-photo">
+              <img src="{{this.image.url}}" class="img-responsive img-full">
+            </div>
             <div class="players">
-            {{#each this.playersInfo}}
-				        <div class="player col-md-4">
-                  <img src="{{this.image.url}}" style="max-width::250px;max-height:250px;" />
-                  <p><b>Name:</b> {{this.name}} </p>
-                  <p><b>Nationality:</b> {{nationality}} </p>
-                  <p><b>Position:</b> {{ this.position }}</p>
-				        </div>
-            {{/each}}
+              <h3 style="text-align: center;">Players</h3>
+              {{#each this.playersInfo}}
+              <div class="player col-md-4">
+                <img src="{{this.image.url}}" class="players-image" />
+                <p><b>Name:</b> {{this.name}} </p>
+                <p><b>Position:</b> {{ this.position }}</p>
+                <p><b>Nationality:</b> {{nationality}} </p>
+              </div>
+              {{/each}}
             </div>
             </div>
+          </div>
+        </div>
         {{/each}}
-		</div>
-	</div>
+      </div>
 </div>

@@ -23,8 +23,10 @@ exports = module.exports = function(req, res) {
 				teamPlayers.exec(function(err, players) {
 					var teamObject = {
 						name: team.name,
+            image: team.image,
 						playersInfo: players
 					};
+          console.log(teamObject.image);
 					locals.data.teams.push(teamObject);
 					console.log(locals.data.teams);
 				});

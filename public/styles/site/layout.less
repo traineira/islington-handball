@@ -9,10 +9,46 @@
 	color: #777777;
 }
 
+#training {
+	width: 400px;
+	height: 400px;
+}
+
+// .team-photo {
+//   width: auto;
+//   height: 500px;
+// }
+
+.affix {
+	top: 0;
+	width: 100%;
+}
+
+.affix + #body {
+	padding-top: 200px;
+}
+
+.caroussel-team {
+  width: auto;
+  height: 500px;
+  max-height: 500px;
+}
+
 .footer-image {
-    width: 100px; /*set the width or max-width*/
-    height: auto; /*this makes sure to maintain the aspect ratio*/
-    max-width:100%;
+	width: 100px;
+	/*set the width or max-width*/
+	height: auto;
+	/*this makes sure to maintain the aspect ratio*/
+	max-width: 100%;
+}
+
+.players-image {
+	width: 250px;
+	/*set the width or max-width*/
+	height: auto;
+	/*this makes sure to maintain the aspect ratio*/
+	max-width: 100%;
+	padding-top: 15%;
 }
 
 .gallery-image img {
@@ -22,6 +58,7 @@
 }
 
 body {
+	background-color: white;
 	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	/*background: url('../img/bg.jpg') no-repeat center center fixed;*/
 	-webkit-background-size: cover;
@@ -41,6 +78,16 @@ h6 {
 	font-weight: 700;
 	letter-spacing: 1px;
 }
+
+// #sidebar {
+// 	position: fixed;
+// 	top: 50%;
+// 	right: 0;
+// 	// left: 50;
+// 	bottom: 0;
+// 	width: 100px;
+// 	color: black;
+// }
 
 p {
 	font-size: 1.25em;
@@ -106,7 +153,12 @@ hr {
 
 .associationWith {
 	color: white;
-  text-align: center;
+	text-align: center;
+}
+
+.sidebar-text {
+	color: black;
+	text-align: center;
 }
 
 .nav.navbar-nav > li > a {
@@ -114,7 +166,7 @@ hr {
 }
 
 .nav.navbar-nav > li > a:active {
-	font-size: 120%;
+	font-size: 80%;
 }
 
 .navbar-default .navbar-nav > .active > a:hover {
@@ -164,7 +216,7 @@ hr {
 	margin-bottom: 20px;
 	padding: 30px 15px;
 	background: #002754;
-	background: rgba(0,39,84,0.9);
+	background: #193C65;
 }
 
 .box p {
@@ -249,8 +301,7 @@ footer p {
 
 	.navbar-default {
 		border: none;
-		// background: #C4001D;
-		background: rgba(196,0,29,0.9);
+		background: #C4001D;
 	}
 
 	.nav > li > a {
@@ -275,4 +326,23 @@ footer p {
 		display: table;
 		clear: both;
 	}
+}
+
+#social_block {
+	background-color: #C4001D;
+}
+
+#joinus-block {
+	overflow: auto;
+	background-image: url("/images/join_us_background.jpg");
+	background-size: cover;
+	display: flex;
+}
+
+.transparent-block {
+	background-color: rgba(255, 255, 255, 0.6);
+	float:right;
+	align-items: stretch;
+	width: 50%;
+	text-align: center;
 }
